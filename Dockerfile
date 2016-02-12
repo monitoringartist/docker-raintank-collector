@@ -8,7 +8,7 @@ ENV \
  apiKey="" \
  probeServerPort=8284
  
-COPY image-files /
+COPY docker-image-files /
 
 RUN \
   apt-get update && \
