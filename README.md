@@ -1,4 +1,4 @@
-Dockerized Raintank Collector
+Dockerized Raintank Collector [![](https://badge.imagelayers.io/monitoringartist/raintank-collector:latest.svg)](https://imagelayers.io/?images=monitoringartist/raintank-collector:latest)
 =============================
 
 Original [non dockerized Raintank Collector](https://github.com/raintank/raintank-collector)
