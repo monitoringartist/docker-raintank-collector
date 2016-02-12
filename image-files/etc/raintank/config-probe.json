@@ -1,0 +1,9 @@
+{
+"collector": {
+  "name": "$name"
+},
+"numCPUs": $numCPUs,
+"serverUrl": "$serverUrl",
+"apiKey": "$apiKey",
+"probeServerPort": $probeServerPort
+}
