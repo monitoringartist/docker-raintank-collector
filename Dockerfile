@@ -14,13 +14,15 @@ RUN \
   apt-get update && \
   apt-get install -y npm && \
   mkdir -p /opt/raintank && \
-  mkdir -p /var/log/raintank && \
   cd /opt/raintank && \  
   git clone https://github.com/raintank/raintank-collector.git && \
   go get github.com/raintank/raintank-probe && \
   cd raintank-collector && cp $(which raintank-probe) . && \
-  chmod +x /bootstrap.sh
+  npm install && \
+  chmod +x /bootstrap.sh && \
+  apt-get autoremove -y && \
+  rm -rf /var/lib/apt/lists/*
   
-WORKDIR /opt/raintank
+WORKDIR /opt/raintank/raintank-collector
 
 CMD ["/bootstrap.sh"]
