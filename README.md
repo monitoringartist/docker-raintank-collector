@@ -1,7 +1,7 @@
 Dockerized Raintank Collector
 =============================
 
-Original [non dockerized version of Raintank Collector](https://github.com/raintank/raintank-collector)
+Original [non dockerized Raintank Collector](https://github.com/raintank/raintank-collector)
 is complicated (node + go), so I've prepared quicker deployement option. 
 Minimal config:
 
@@ -28,7 +28,7 @@ You can use environment variables to configure Raintank collector container:
 | Environment variable | Default value |
 | -------------------- | ------------- |
 | apiKey | |
-| name | <random string> |
+| name | \<random string\> |
 | serverUrl | https://controller.raintank.io |
 | probeServerPort | 8284 |
 | numCPUs | 1 |
