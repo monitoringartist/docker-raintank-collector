@@ -1,8 +1,8 @@
 Dockerized Raintank Collector [![](https://badge.imagelayers.io/monitoringartist/raintank-collector:latest.svg)](https://imagelayers.io/?images=monitoringartist/raintank-collector:latest)
 =============================
 
-Original [non dockerized Raintank Collector](https://github.com/raintank/raintank-collector)
-is complicated (node + go), so I've prepared quicker deployement option. 
+Original [non dockerized Raintank Collector](https://github.com/raintank/raintank-collector) 
+is complicated (node + go installation), so I've prepared quicker (~30sec) deployement option. 
 Minimal config:
 
 ```
@@ -14,6 +14,8 @@ docker run \
     -e "name=<COLLECTOR_NAME>" \
     monitoringartist/raintank-collector
 ```
+
+![Dockerized Raintank collector](https://raw.githubusercontent.com/monitoringartist/docker-raintank-collector/master/doc/raintank-collector-monitoring-artist.gif)
 
 Please donate to author, so he can continue to publish other awesome projects 
 for free:
