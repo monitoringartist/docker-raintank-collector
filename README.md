@@ -11,6 +11,7 @@ docker run \
     --name raintank-collector \
     -p 8284:8284 \
     -e "apiKey=<RAINTANK_API_KEY>" \
+    -e "name=<COLLECTOR_NAME>" \
     monitoringartist/raintank-collector
 ```
 
