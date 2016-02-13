@@ -44,6 +44,7 @@ docker run \
     -e "name=monitoring-artist-collector" \
     -e "apiKey=<RAINTANK_API_KEY>" \
     -e "numCPUs=2" \
+    monitoringartist/raintank-collector
 ```
 
 Troubleshooting
