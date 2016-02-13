@@ -31,6 +31,8 @@ RUN \
   npm install && \
   chmod +x /bootstrap.sh && \
   apt-get autoremove -y g++ gcc make curl git && \
-  rm -rf /usr/local/go/ /go/ /var/lib/apt/lists/*
+  rm -rf /usr/local/go/ /go/ /opt/raintank/raintank-collector/*.md /var/lib/apt/lists/* && \
+  rm -rf /opt/raintank/raintank-collector/circle.yml /opt/raintank/raintank-collector/etc && \
+  rm -rf /opt/raintank/raintank-collector/.git* /opt/raintank/raintank-collector/.npmignore
 
 CMD ["/bootstrap.sh"]
