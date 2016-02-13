@@ -12,15 +12,15 @@ reset=$(tput sgr0)
 if [ -z "$name" ]; then
     export name=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
 fi
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh" " Config name: $name${reset}"
+printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh -" " Config name: $name${reset}"
 echo ""
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh" " Config numCPUs: $numCPUs${reset}"
+printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh -" " Config numCPUs: $numCPUs${reset}"
 echo ""
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh" " Config serverUrl: $serverUrl${reset}"
+printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh -" " Config serverUrl: $serverUrl${reset}"
 echo ""
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh" " Config apiKey: $apiKey${reset}"
+printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh -" " Config apiKey: $apiKey${reset}"
 echo ""
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh" " Config probeServerPort: $probeServerPort${reset}"
+printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "$(date +"%N"|cut -c -3)" "] [INFO] /boostrap.sh -" " Config probeServerPort: $probeServerPort${reset}"
 echo ""
 for i in $( set -o posix ; set ); do
     reg=$(echo ${i} | awk -F'=' '{print $1}')
