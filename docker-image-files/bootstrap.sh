@@ -27,4 +27,5 @@ for i in $( set -o posix ; set ); do
     val=$(echo ${i} | awk -F'=' '{print $2}')
     sed -i "s#\$${reg}#${val}#g" /etc/raintank/config-probe.json
 done
+cd /opt/raintank/raintank-collector
 nodejs app.js -c /etc/raintank/config-probe.json
