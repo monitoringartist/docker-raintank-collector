@@ -25,7 +25,14 @@ RUN \
   npm install && \
   chmod +x /bootstrap.sh && \
   apk del --purge g++ gcc make curl git go && \
-  rm -rf /var/cache/apk/* /opt/raintank/raintank-collector/*.md ${GOPATH} && \
+  find . -name '*.md' -print -delete && \
+  find . -name 'rfc*.txt' -print -delete && \
+  find . -name 'LICENSE*' -print -delete && \
+  find . -name '*.yml' -print -delete && \
+  rm -rf ./node_modules/net-snmp/example && \
+  rm -rf ./node_modules/cluster/node_modules/mkdirp/node_modules/minimist/example && \
+  rm -rf ./node_modules/socket.io-client/node_modules/engine.io-client/node_modules/xmlhttprequest-ssl/example && \
+  rm -rf /var/cache/apk/* ${GOPATH} && \
   rm -rf /opt/raintank/raintank-collector/circle.yml /opt/raintank/raintank-collector/etc && \
   rm -rf /opt/raintank/raintank-collector/.git* /opt/raintank/raintank-collector/.npmignore
 
