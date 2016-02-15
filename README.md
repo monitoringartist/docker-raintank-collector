@@ -2,7 +2,7 @@ Dockerized Raintank Collector [![](https://badge.imagelayers.io/monitoringartist
 =============================
 
 Original [non dockerized Raintank Collector](https://github.com/raintank/raintank-collector) 
-is complicated (node + go installation), so I've prepared quicker (~30sec) deployment option. 
+is complicated (node + go installation), so I've prepared quicker (~10sec) deployment option. 
 Minimal config:
 
 ```
