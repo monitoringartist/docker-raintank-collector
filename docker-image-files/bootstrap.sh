@@ -1,19 +1,18 @@
 #!/bin/sh
 
-# TODO yellow color
-
+TERM=xterm-color
 if [ -z "$name" ]; then
     export name=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
 fi
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "000] [INFO] /boostrap.sh -" " Config name: $name${reset}"
+printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config name: $name${reset}"
 echo ""
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "000] [INFO] /boostrap.sh -" " Config numCPUs: $numCPUs${reset}"
+printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config numCPUs: $numCPUs${reset}"
 echo ""
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "000] [INFO] /boostrap.sh -" " Config serverUrl: $serverUrl${reset}"
+printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config serverUrl: $serverUrl${reset}"
 echo ""
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "000] [INFO] /boostrap.sh -" " Config apiKey: $apiKey${reset}"
+printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config apiKey: $apiKey${reset}"
 echo ""
-printf %s "${yellow}[" "$(date +"%Y-%m-%d %T.")" "000] [INFO] /boostrap.sh -" " Config probeServerPort: $probeServerPort${reset}"
+printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config probeServerPort: $probeServerPort${reset}"
 echo ""
 for i in $( set ); do
     reg=$(echo ${i} | awk -F'=' '{print $1}')
