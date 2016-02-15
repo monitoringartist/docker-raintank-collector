@@ -2,12 +2,12 @@ FROM alpine
 MAINTAINER Jan Garaj info@monitoringartist.com
 
 ENV \
- name="" \
- numCPUs=1 \
- serverUrl="https://controller.raintank.io" \
- apiKey="" \
- probeServerPort=8284 
- 
+ RAINTANK_apiKey="" \
+ RAINTANK_logLevel="ERROR" \
+ RAINTANK_numCPUs=1 \
+ RAINTANK_probeServerPort=8284 \
+ RAINTANK_serverUrl="https://controller.raintank.io"
+
 COPY docker-image-files /
 
 RUN \
@@ -18,7 +18,9 @@ RUN \
   mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH" && \  
   mkdir -p /opt/raintank && \
   cd /opt/raintank && \  
-  git clone https://github.com/raintank/raintank-collector.git && \
+  # git clone https://github.com/raintank/raintank-collector.git && \
+  git clone https://github.com/jangaraj/raintank-collector && \
+  git checkout loglevel && \
   go get github.com/raintank/raintank-probe && \
   cd raintank-collector && \
   cp $GOPATH/bin/raintank-probe . && \

@@ -10,8 +10,8 @@ docker run \
     -d \
     --name raintank-collector \
     -p 8284:8284 \
-    -e "apiKey=<RAINTANK_API_KEY>" \
-    -e "name=<COLLECTOR_NAME>" \
+    -e "RAINTANK_apiKey=<RAINTANK_API_KEY>" \
+    -e "RAINTANK_collector_name=<COLLECTOR_NAME>" \
     monitoringartist/raintank-collector
 ```
 
@@ -27,13 +27,14 @@ Configuration
 
 You can use environment variables to configure Raintank collector container:
 
-| Environment variable | Default value |
-| -------------------- | ------------- |
-| apiKey | |
-| name | \<random string\> |
-| serverUrl | https://controller.raintank.io |
-| probeServerPort | 8284 |
-| numCPUs | 1 |
+| Environment variable | Default value | Note |
+| -------------------- | ------------- | ----- |
+| RAINTANK_apiKey | | use your API key |
+| RAINTANK_collector_name | \<random string\> | |
+| RAINTANK_logLevel | ERROR | Options: OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL |
+| RAINTANK_numCPUs | 1 | |
+| RAINTANK_probeServerPort | 8284 | use some free port |
+| RAINTANK_serverUrl | https://controller.raintank.io | |
 
 Example:
 
@@ -42,10 +43,10 @@ docker run \
     -d \
     --name raintank-collector \
     -p 8284:8284 \
-    -e "probeServerPort=8284" \
-    -e "name=monitoring-artist-collector" \
-    -e "apiKey=<RAINTANK_API_KEY>" \
-    -e "numCPUs=2" \
+    -e "RAINTANK_probeServerPort=8284" \
+    -e "RAINTANK_collector_name=monitoring-artist-collector" \
+    -e "RAINTANK_apiKey=<RAINTANK_API_KEY>" \
+    -e "RAINTANK_numCPUs=2" \
     monitoringartist/raintank-collector
 ```
 
