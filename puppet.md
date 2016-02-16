@@ -10,7 +10,7 @@ class { 'docker':
   version => 'latest',
 }->
 docker::image { 'monitoringartist/raintank-collector':
-  image_tag => 'latest'
+  image_tag => 'latest',
 }->
 docker::run { 'raintank-collector':
   image => 'monitoringartist/raintank-collector',
@@ -21,7 +21,7 @@ docker::run { 'raintank-collector':
     'RAINTANK_numCPUs=1',
     'RAINTANK_logLevel=ERROR',
     'RAINTANK_probeServerPort=8284'
-  ]
+  ],
 }
 ```
 
