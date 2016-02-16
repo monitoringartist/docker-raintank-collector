@@ -76,6 +76,11 @@ Always set up `RAINTANK_logLevel=ALL` and then check docker container logs, for 
 ...
 ```
 
+Integrations
+============
+
+* [Puppet for dockerized raintank-collector](https://github.com/monitoringartist/docker-raintank-collector/blob/master/puppet.md)
+
 Author
 ======
 
