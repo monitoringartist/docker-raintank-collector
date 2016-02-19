@@ -80,6 +80,7 @@ Integrations
 ============
 
 * [Puppet for dockerized raintank-collector](https://github.com/monitoringartist/docker-raintank-collector/blob/master/puppet.md)
+* [Ansible for dockerized raintank-collector](https://github.com/monitoringartist/docker-raintank-collector/blob/master/ansible.md)
 
 Author
 ======
