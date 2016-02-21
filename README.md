@@ -1,4 +1,6 @@
-# Dockerized Raintank Collector [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/raintank/raintank-collector) [![](https://badge.imagelayers.io/monitoringartist/raintank-collector:latest.svg)](https://imagelayers.io/?images=monitoringartist/raintank-collector:latest)
+# Dockerized Raintank Collector [![](https://badge.imagelayers.io/monitoringartist/raintank-collector:latest.svg)](https://imagelayers.io/?images=monitoringartist/raintank-collector:latest)
+
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/raintank/raintank-collector)
 
 Original [non dockerized Raintank Collector](https://github.com/raintank/raintank-collector) 
 is complicated (node + go installation), so I've prepared quicker (~10sec) deployment option. Quick start:
