@@ -1,0 +1,7 @@
+raintank-collector:
+  image: monitoringartist/raintank-collector:latest
+  ports:
+    - "8284:8284"
+  environment:
+    - RAINTANK_apiKey=<RAINTANK API KEY>
+    - RAINTANK_collector_name=<COLLECTOR NAME>

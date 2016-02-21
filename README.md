@@ -1,17 +1,15 @@
-Dockerized Raintank Collector [![](https://badge.imagelayers.io/monitoringartist/raintank-collector:latest.svg)](https://imagelayers.io/?images=monitoringartist/raintank-collector:latest)
-=============================
+# Dockerized Raintank Collector [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/raintank/raintank-collector) [![](https://badge.imagelayers.io/monitoringartist/raintank-collector:latest.svg)](https://imagelayers.io/?images=monitoringartist/raintank-collector:latest)
 
 Original [non dockerized Raintank Collector](https://github.com/raintank/raintank-collector) 
-is complicated (node + go installation), so I've prepared quicker (~10sec) deployment option. 
-Minimal config:
+is complicated (node + go installation), so I've prepared quicker (~10sec) deployment option. Quick start:
 
 ```
 docker run \
     -d \
     -p 8284:8284 \
-    -e "RAINTANK_apiKey=<RAINTANK_API_KEY>" \
-    -e "RAINTANK_collector_name=<COLLECTOR_NAME>" \
-    monitoringartist/raintank-collector
+    -e "RAINTANK_apiKey=<RAINTANK API KEY>" \
+    -e "RAINTANK_collector_name=<COLLECTOR NAME>" \
+    monitoringartist/raintank-collector:latest
 ```
 
 ![Dockerized Raintank collector](https://raw.githubusercontent.com/monitoringartist/docker-raintank-collector/master/doc/raintank-collector-monitoring-artist.gif)
@@ -21,8 +19,7 @@ for free:
 
 [![Paypal donate button](http://jangaraj.com/img/github-donate-button02.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8LB6J222WRUZ4)
 
-Configuration
-=============
+# Configuration
 
 You can use environment variables to configure Raintank collector container:
 
@@ -42,16 +39,15 @@ docker run \
     -d \
     --name raintank-collector \
     -p 8284:8284 \
-    -e "RAINTANK_apiKey=eyJrIjoiYTdiaExsNXM1dG5Oa1BKd3BEQnc3RjZyN2IxeDJVZ3EiLCJuIjoiY29sbGVjdG9yIiwiaWQiOjEwNjV9" \
-    -e "RAINTANK_collector_name=monitoring-artist-collector" \
+    -e "RAINTANK_apiKey=<RAINTANK API KEY>" \
+    -e "RAINTANK_collector_name=<COLLECTOR NAME>" \
     -e "RAINTANK_numCPUs=1" \
     -e "RAINTANK_logLevel=ALL" \
     -e "RAINTANK_probeServerPort=8284" \
-    monitoringartist/raintank-collector
+    monitoringartist/raintank-collector:latest
 ```
 
-Troubleshooting
-===============
+# Troubleshooting
 
 Always set up `RAINTANK_logLevel=ALL` and then check docker container logs, for example:
 
@@ -76,14 +72,13 @@ Always set up `RAINTANK_logLevel=ALL` and then check docker container logs, for 
 ...
 ```
 
-Integrations
-============
+# Integrations
 
 * [Puppet for dockerized raintank-collector](https://github.com/monitoringartist/docker-raintank-collector/blob/master/puppet.md)
 * [Ansible for dockerized raintank-collector](https://github.com/monitoringartist/docker-raintank-collector/blob/master/ansible.md)
+* [docker-compose for dockerized raintank-collector](https://github.com/monitoringartist/docker-raintank-collector/blob/master/docker-compose.yml)
 
-Author
-======
+# Author
 
 [Devops Monitoring zExpert](http://www.jangaraj.com 'DevOps / Docker / Kubernetes / Zabbix / Zenoss / Monitoring'), 
 who loves monitoring systems, which start with letter Z. 
