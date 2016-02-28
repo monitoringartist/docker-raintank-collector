@@ -18,8 +18,8 @@ RUN \
   mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH" && \  
   mkdir -p /opt/raintank && \
   cd /opt/raintank && \  
-  # git clone https://github.com/raintank/raintank-collector.git && \
-  git clone -b  loglevel https://github.com/jangaraj/raintank-collector && \
+  git clone https://github.com/raintank/raintank-collector.git && \
+  # git clone -b  loglevel https://github.com/jangaraj/raintank-collector && \
   go get github.com/raintank/raintank-probe && \
   cd raintank-collector && \
   cp $GOPATH/bin/raintank-probe . && \
