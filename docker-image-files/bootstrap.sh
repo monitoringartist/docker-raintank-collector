@@ -12,7 +12,7 @@ printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Co
 echo ""
 printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config numCPUs: $RAINTANK_numCPUs${reset}"
 echo ""
-printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config probeServerPort: $RAINTANK_RAINTANK_probeServerPort${reset}"
+printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config probeServerPort: $RAINTANK_probeServerPort${reset}"
 echo ""
 printf '\e[1;33m%-6s\e[m' "[$(date +"%Y-%m-%d %T.")000] [INFO] /boostrap.sh - Config serverUrl: $RAINTANK_serverUrl${reset}"
 echo ""
